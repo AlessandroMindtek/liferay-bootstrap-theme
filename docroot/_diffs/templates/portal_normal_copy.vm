@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	$theme.include($top_head_include)
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="$css_folder/bootstrap.min.css"/>
+	<link type="text/css" rel="stylesheet" href="$css_folder/bootstrap-responsive.min.css"/>
+	<link type="text/css" rel="stylesheet" href="$css_folder/bootstrap-overrides.css"/>
+	<link type='text/css' rel='stylesheet' href="$css_folder/fontawesome/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="$javascript_folder/chosen/chosen.css"/>
+	<link type="text/css" rel="stylesheet" href="$css_folder/chosen-overrides.css"/>
+	<script type="text/javascript" src="$javascript_folder/jquery-1.10.1.js"></script>
+	<script type="text/javascript" src="$javascript_folder/bootstrap.min.js"></script>
+	<script type="text/javascript" src="$javascript_folder/chosen/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="$javascript_folder/iniciar.js"></script>
+	
+</head>
+
+<body class="$css_class">
+
+#if($is_signed_in)
+	#dockbar()
+#end
+
+
+<div id="wrapper">
+	<a href="#main-content" id="skip-to-content">#language("skip-to-content")</a>
+		
+		#if( !$is_signed_in)
+
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<div class="row">
+						<div class="span12">
+							<div class="nav-collapse collapse">
+								<ul class="nav">
+									<li class="active"><a href="./index.html">
+										<i class="icon-home"></i> Home</a>
+									</li>
+									<li class="">
+										<a href="#"><i class="icon-user"></i> Beneficiário</a>
+									</li>
+									<li class="">
+										<a href="#"><i class="icon-stethoscope"></i> Credenciado</a>
+									</li>
+									<li class="">
+										<a href="#"><i class="icon-legal"></i> Conselho deliberativo</a>
+									</li>
+									<li class="">
+										<a href="#"><i class="icon-comment-alt"></i> Conselho fiscal</a>
+									</li>
+									<li class="">
+										<a href="#"><i class="icon-group"></i> Funcionários</a>
+									</li>
+									<li class="">
+										<a href="#"><i class="icon-signout"></i> Sair</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		#end
+
+		<div class="container">
+			<header id="overview" role="banner" class="subhead after-top-bar">
+					<div class="row">
+						<div class="span2">
+							<div class="logo">
+								<hgroup id="heading">
+									<h1 class="company-title">
+										<a class="logo" href="$company_url" title="#language("go-to") $company_name">
+										<span>$company_name</span>
+										</a>
+									</h1>
+								</hgroup>
+							</div>	
+						</div>
+						<div class="span10">
+							<div class="cra-header">
+								<h4>Central de relacionamento com os associados: <span class="telefone">0800 979 6191</span></h4>
+							</div>
+							
+							#if ($has_navigation)
+								#parse ("$full_templates_path/navigation.vm")
+							#end
+
+						</div>
+					</div>
+
+					#if ($update_available_url)
+						<div class="popup-alert-notice">
+							<a class="update-available" href="$update_available_url">#language("updates-are-available-for-liferay")</a>
+						</div>
+					#end
+
+		</header>
+	</div>
+
+	<div class="container">
+		<div id="content">
+			<div class="container">
+				<div class="row">
+					<nav class="site-breadcrumbs" id="breadcrumbs">
+						<h1>
+							<span>#language("breadcrumbs")</span>
+						</h1>
+						#breadcrumbs()
+					</nav>
+				</div>
+			</div>
+
+			#if ($selectable)
+				$theme.include($content_include)
+			#else
+				$portletDisplay.recycle()
+				$portletDisplay.setTitle($the_title)
+				$theme.wrapPortlet("portlet.vm", $content_include)
+			#end
+		</div>
+	</div>
+
+	<div class="container">
+		<footer id="footer" role="contentinfo">	
+			<div class="row">
+				<div class="footer-nav">
+					#if ($has_navigation)
+						#parse ("$full_templates_path/footer_navigation.vm")
+					#end
+				</div>
+			</div>
+			<li><hr></li>
+			<div class="row">
+				<div class="span3">
+					<center>
+						<img src="/capesesp-bootstrap-theme/images/ans.png"/>
+					</center>
+				</div>
+				<div class="span6">
+					<center>
+						<p><a href="#">Política de privacidade</a> - <a href="#">Termos de uso</a></p>
+						<p>Caixa de Previdência e Assistência dos Servidores da Fundação Nacional de Saúde</p>
+						<p>Av. Marechal Câmara, 160, 6° e 7° andares, Centro, Rio de Janeiro</p>
+					</center>
+				</div>
+				<div class="span3">
+					<center>
+						<img src="/capesesp-bootstrap-theme/images/ans_code.png"/>
+					</center>
+				</div>
+			</div>
+			<p class="powered-by">
+				#language("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+			</p>
+		</footer>
+	</div>
+</div>
+
+</body>
+
+$theme.include($bottom_include)
+
+</html>

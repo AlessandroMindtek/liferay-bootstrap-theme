@@ -1,0 +1,439 @@
+/**
+ * cores
+ *
+ * laranja: #fc7a06
+ * verde:   #1E6811
+ * azul:    #176781
+ *
+ */
+
+/**
+ *
+ * sobrescrita do bootstrap
+ *
+ */
+
+body {
+<<<<<<< .mine
+	font-family: 'Ubuntu', sans-serif;
+=======
+	font-family: sans-serif;
+>>>>>>> .r425
+}
+
+a {
+	color: #176781/*azul*/;
+}
+
+h1 {
+	font-weight: bold;
+	color: #176781;
+}
+
+.navbar .brand {
+	line-height: 30px;
+	padding: 0 20px;
+	display: none;
+	visibility: hidden;
+}
+
+.nav-header {
+    font-size: 14.8px;
+}
+
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+	background-color: #176781/*azul*/;
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar-inner {
+	min-height: 32px;
+}
+
+.navbar .nav > li > a {
+	padding: 6px 16px;
+}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+	color: #fc7a06;
+	/*
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	*/
+	background: radial-gradient(circle at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+.nav-tabs > li > a {
+	border-radius: 8px 8px 0 0;
+}
+
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+	background-color: #eee;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+	background-color: #176781/*azul*/;
+	background-image: linear-gradient(to bottom, #176781/*azul*/, #176781/*azul*/);
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.carousel {
+	margin-bottom: 0;
+}
+
+.carousel-control {
+	font-size: 32px;
+	line-height: 40px;
+	margin-top: 0;
+	top: 35%;
+}
+
+.carousel-inner .item {
+	padding: 0px;
+	border: 1px solid #eee;
+	border-radius: 16px;
+}
+
+.carousel-inner .item h1 {
+	font-weight: bold;
+	color: #176781;
+}
+
+footer {
+	display: block;
+	margin: 32px 0;
+	padding: 8px 0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+ul.nav.nav-tabs {
+	margin-bottom: 2%;
+}
+
+input[type="submit"].btn {
+	margin-bottom: 10px;
+}
+
+.nav-list {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.btn-primary {
+	background-color: #176781;
+	background-image: linear-gradient(to bottom, #1A7996, #176781);
+	background-repeat: repeat-x;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #176781;
+}
+
+.jumbotron {
+	padding: 100px;
+}
+
+.jumbotron img {
+	margin: 20px;
+}
+
+.jumbotron h1 {
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1;
+}
+
+.jumbotron p {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.25;
+	margin-bottom: 30px;
+}
+
+.jumbotron .btn-profile {
+	margin: 20px;
+	display: inline-table;
+}
+
+/**
+ *
+ * classes especificas da capesesp
+ *
+ */
+.navbar.servico .navbar-inner {
+	padding: 0;
+}
+
+.navbar.servico .nav > li > span {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 6px 16px;
+	display: inline-block;
+}
+
+.amuc-logo  {
+	margin-top: 1em;
+}
+
+
+.choose-font {
+	margin-top: 8px;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.float-right {
+	float: right !important;
+}
+
+.after-top-bar {
+	margin-top: 45px;
+}
+
+.cra-header {
+	margin: 0 0;
+}
+
+.cra-header h3 {
+	color: #176781/*azul*/;
+}
+
+.telefone {
+	color: #fc7a06;
+	white-space: nowrap;
+}
+
+.servicos {
+	margin-top: 16px;
+}
+
+.servicos h1, .servicos h2, .servicos h3 {
+	font-size: 24px;
+	color: #1E6811/*verde*/
+}
+
+.servicos h1 i, .servicos h2 i, .servicos h3 i {
+	font-size:24px;
+	color: #fc7a06/*laranja*/;
+}
+
+.servicos h2 {
+	color: #555;
+	font-size: 20px;
+	line-height: 32px;
+	margin: 5px 0;
+	border-bottom: 2px solid #FC7A06;
+	margin-bottom: 16px;
+}
+
+.servicos ul {
+	background-color: #FFFFFF;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+
+.servicos > ul > li > a {
+	border: 1px solid #E5E5E5;
+	display: block;
+	margin: 0 0 -1px;
+	padding: 8px 8px;
+}
+
+@media (max-width:1024px){
+	.servicos > ul > li > a {
+		font-size: 11px;
+	}
+}
+
+.servicos > ul > li:first-child > a {
+	border-radius: 8px 8px 0 0;
+}
+
+.servicos > ul > li:last-child > a {
+	border-radius: 0 0 8px 8px;
+}
+
+.tipo-credenciado h1 {
+	font-size: 20px;
+}
+
+.tipo-credenciado i{
+	color: #fc7a06;/*laranja*/
+}
+
+
+.icon-odonto:before {
+	content: " ";
+}
+	
+/*.servicos ul {
+	font-size: 16px;
+	list-style-type: none;
+}*/
+
+h3.asset-title {
+	margin-bottom: 0;
+	font-size: 17px;
+}
+
+.logo {
+	padding-bottom: 1em;
+}
+
+.logo img {
+	vertical-align: bottom;
+	margin-right: 1em;
+}
+
+div.login {
+	margin-top: 1%;
+}
+
+.page-header {
+	border-bottom: 1px solid #EEEEEE;
+	margin: 10px 0;
+	padding: 0;
+}
+
+.page-header h1 {
+	font-size: 32px; 
+}
+
+.profile-icons {
+	font-size: 48px;
+	color: #FC7A06;
+	margin: 20px;
+}
+
+div.footer {
+	margin-top: 40px;
+}
+
+
+/**
+ * especifico para funcional card
+ */
+
+.funcional-logo {
+	line-height: 32px;
+	float:right;
+}
+
+div.funcional-login {
+	float: right;
+	position: relative;
+	right: 0;
+}
+
+.funcional-login input, .funcional-login button {
+	margin-bottom: .5em;
+}
+
+/*
+ * diferencas de acordo com a resolucao de tela
+ */
+
+@media screen and (max-width:1310px){
+	#_77_keywords {
+	    width: 130px;
+	}
+}
+
+@media screen and (max-width:1070px){
+	#_77_keywords {
+	    width: 89px;
+	}
+	#umclique{
+		width: 154px;
+	}
+}
+
+@media screen and (max-width:980px) {
+	.servicos h2 {
+		font-size: 16px;
+	}
+	h3.asset-title {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.after-top-bar {
+		margin-top: 16px;
+	}
+	
+	.carousel-inner .item h1 {
+		font-size: 18px;
+	}
+
+	.logo {
+		text-align: center;
+		padding: 0.5em;
+	}
+	
+	.cra-header {
+		margin-top: 0;
+		margin-bottom: 0.5em;
+		text-align: center;
+	}
+
+	.navbar .brand {
+		display: inherit;
+		visibility: visible;
+	}
+
+	#_77_keywords {
+	    width: 170px;
+	}
+
+	#umclique {
+		width: 250px;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.after-top-bar {
+		margin-top: 16px/*after-top-bar*/;
+	}
+
+	.navbar-fixed-top {
+	    margin-bottom: 5px;
+	}
+
+	.cra-header h4 {
+		font-size: 14px;
+	}
+
+
+	.logo > img {
+		max-width:50%;
+	}
+
+	.navbar .brand {
+		display: inherit;
+		visibility: visible;
+	}
+
+	.carousel-inner .item,
+	.carousel-control {
+		display:none;
+	}
+}

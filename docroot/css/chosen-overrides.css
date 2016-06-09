@@ -1,0 +1,15 @@
+
+.chzn-container .chzn-results .highlighted {
+  background-color:  #176781;
+  background-image: none;
+  color: #fff;
+}
+
+@media (max-width: 800px){
+	.chzn-container,
+	.chzn-container .chzn-drop,
+	.chzn-container .chzn-results {
+	    width: auto;
+	    max-width: 100%;
+	}
+}

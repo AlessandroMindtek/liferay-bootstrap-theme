@@ -1,0 +1,30 @@
+<ul class="nav nav-tabs" id="header-nav">
+	#foreach ($nav_item in $nav_items)
+		#if (!$nav_item.hasChildren())
+			<li>
+				<a href="$nav_item.getURL()">
+					<span>$nav_item.icon() $htmlUtil.escape($nav_item.getName())</span>
+				</a>
+			</li>
+			#break
+		#elseif ($nav_item.isSelected())
+			<li class="dropdown active">
+		#else
+			<li class="dropdown">
+		#end
+
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#" $nav_item.getTarget()>
+			<span>$nav_item.icon() $htmlUtil.escape($nav_item.getName())</span>
+			<b class="caret"></b>
+		</a>
+
+		#if ($nav_item.hasChildren())
+			<ul class="dropdown-menu">			
+			#foreach ($nav_child in $nav_item.getChildren())
+				<li class=""><a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a></li>				
+			#end
+			</ul>
+		#end
+		</li>
+	#end
+</ul>
