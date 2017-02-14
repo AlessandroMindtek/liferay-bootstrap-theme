@@ -6,20 +6,23 @@
 
 <head>
 	<title>$the_title - $company_name</title>
+	<meta name="google-site-verification" content="mBmNqCh3tga97tlHgkUOsvhJefvxyB12fWbA7wGxNyY" />
 
 	$theme.include($top_head_include)
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
-	<link type="text/css" rel="stylesheet" href="$css_folder/bootstrap.min.css"/>
+	<link type="text/css" rel="stylesheet" href="$css_folder/bootstrap.min.css" title="normal"/>
 	<link type="text/css" rel="stylesheet" href="$css_folder/bootstrap-responsive.min.css"/>
 	<link type="text/css" rel="stylesheet" href="$css_folder/bootstrap-overrides.css"/>
 	<link type='text/css' rel='stylesheet' href="$css_folder/fontawesome/css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="$javascript_folder/chosen/chosen.css"/>
 	<link type="text/css" rel="stylesheet" href="$css_folder/chosen-overrides.css"/>
+	<link type="text/css" rel="alternate stylesheet" href="$css_folder/contraste.css" title="contraste"/>
 	
 	<script type="text/javascript" src="$javascript_folder/jquery-1.10.1.js"></script>
 	<script type="text/javascript" src="$javascript_folder/bootstrap.min.js"></script>
 	<script type="text/javascript" src="$javascript_folder/chosen/chosen.jquery.min.js"></script>
 	<script type="text/javascript" src="$javascript_folder/iniciar.js"></script>
+	<script type="text/javascript" src="$javascript_folder/contraste.js"></script>
 
 </head>
 
@@ -46,9 +49,6 @@
 								<li class="active"><a href="$company_url">
 									<i class="icon-home"></i> Home</a>
 								</li>
-								<li class="">
-									<a href="http://servicos.capesesp.com.br/login/login.php?servico=portal_conselho"><i class="icon-legal"></i> Conselhos</a>
-								</li>
 							</ul>
 						</div>
 					</div>
@@ -60,11 +60,24 @@
 
 	<header id="overview" class="subhead after-top-bar">
 			<div class="container">
+				<div class="row" style="padding-bottom: 15px;" role="navigation" aria-label="acessibilidade">
+					<div>
+						<a href="#conteudo-principal" accesskey="1" class="span2"><span class="label label-info">1</span> Saltar para conteúdo</a>
+						<a href="#header-nav" accesskey="2" class="span2"><span class="label label-info">2</span> Saltar para o menu</a>
+						<a href="https://servicos.capesesp.com.br/associado/acessibilidade/" accesskey="3" class="span2" target="_blank"><span class="label label-info">3</span> Acessibilidade</a>
+					</div>
+					<div style="float: right; text-align: right;" class="span4">
+						<a href="#" onClick="mudafonte(-2)" title="Diminuir as letras"  accesskey="4">A-</a> | 
+						<a href="#" onClick="mudafonte(0)" title="Tamanho original das letras"  accesskey="5">A</a> | 
+						<a href="#" onClick="mudafonte(2)" title="Aumentar as letras" accesskey="6">A+</a> |
+						<a href="#" onClick="setActiveStyleSheet('contraste'); return false;" title="alto-contraste" accesskey="7">Alto Contraste</a> | 
+						<a href="#" onClick="setActiveStyleSheet('normal'); return false;" title="cores-originais" accesskey="8">Cores Originais</a> 
+					</div>
+				</div>
 				<div class="row">
 					<div class="span2">
 						<div class="logo">
 							<a class="logo" href="$company_url" title="#language("go-to") $company_name">
-								<img src="$images_folder/logo.png">
 							</a>
 						</div>	
 					</div>
@@ -88,7 +101,7 @@
 			</div>
 	</header>
 
-	<div class="container">
+	<div class="container" id="conteudo-principal">
 		<div id="content">
 			<!--<div class="container">
 				<div class="row">
@@ -119,22 +132,35 @@
 				#end	
 			</div>
 		</footer>
-		<div class="row">
+		<div class="row footer">
 			<div class="span3">
-				<center>
-					<img src="/capesesp-bootstrap-theme/images/ans.png"/>
-				</center>
+				<a href="https://www.ans.gov.br/" target="_blank">
+				<div class="logo-ans">
+				</div>
+				</a>
+				<div style="margin: 7px 0 0 31px;text-align:center;">
+					<img src="$images_folder/ans_code.png"/>
+				</div>
 			</div>
 			<div class="span6">
 				<center>
+					<div style="margin-bottom:6px;margin-top:10px;height:35px;width:150px;">
+						<a href="https://www.facebook.com/capesespoficial" target="_blank" class="fb_media"><div class="fb_media media_ico"></div></a>
+						<a href="https://twitter.com/capesespoficial" target="_blank"><div class="tt_media media_ico"></div></a>
+						<a href="https://www.instagram.com/capesespoficial/" target="_blank"><div class="insta_media media_ico"></div></a>
+						<a href="https://www.youtube.com/channel/UCI0FPa33WLlLtvSPkd_nfLg" target="_blank"><div class="you_media media_ico"></div></a>
+					</div>
 					<p><a href="/c/document_library/get_file?uuid=b065cfeb-3852-49c8-88db-63d51adfe37a&groupId=10156" target="_blank">Política de privacidade e termos de uso</a></p>
 					<p>Caixa de Previdência e Assistência dos Servidores da Fundação Nacional de Saúde</p>
-					<p>Av. Marechal Câmara, 160, 6° e 7° andares, Centro, Rio de Janeiro</p>
+					<p>Av. Marechal Câmara, 160, 6° e 7° andares, Centro, Rio de Janeiro - CEP: 20020-080</p>
 				</center>
 			</div>
-			<div class="span3">
-					<center>
-					<img src="/capesesp-bootstrap-theme/images/ans_code.png"/>
+			<div class="span3" style="text-align: center; margin-top: 10px;">
+				<center>
+					<a href="http://www.previc.gov.br/" target="_blank">
+						<div class="logo-previc">
+						</div>
+					</a>
 				</center>
 			</div>
 		</div>

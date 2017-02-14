@@ -10,6 +10,5 @@ $(document).ready(function(){
 		window.open(serviceLink);
 	});
 
-	$("table").addClass("table table-striped");
 });
 
