@@ -14,59 +14,20 @@
  */
 
 body {
-	font-family: sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 a {
-	color: #176781/*azul*/;
+	color:#FFF/*azul*/;
 }
 
-.logo a {
-    background-image: url("/capesesp-bootstrap-acessibilidade-theme/images/logo.png");
-    background-repeat: no-repeat;
-    display: block;
-    height: 127px;
-    width: 180px;
-    margin-top: -10px;
-
-}
-.footer .logo-ans{    
-    background-image: url("/capesesp-bootstrap-acessibilidade-theme/images/ans.png");
-    background-repeat: no-repeat;
-    display: block;
-    height: 45px;
-    margin: 0px 57px;
-    width: 185px;
-}
-
-.logo-previc{
-    background-image: url("/capesesp-bootstrap-acessibilidade-theme/images/logo_previc.png");
-    width: 123px;
-    height: 41px;
-}
-
-.media_ico{
-    width: 35px;
-    height: 35px;
-    float: left;
-}
-
-.fb_media{
-    background-image: url("/capesesp-bootstrap-acessibilidade-theme/images/face_ico.png");
-}
-.tt_media{
-    background-image: url("/capesesp-bootstrap-acessibilidade-theme/images/twitter_ico.png");
-}
-.insta_media{
-    background-image: url("/capesesp-bootstrap-acessibilidade-theme/images/instagram_ico.png");
-}
-.you_media{
-    background-image: url("/capesesp-bootstrap-acessibilidade-theme/images/youtube_ico.png");
+a.accordion-toggle {
+	color: #FFF;
 }
 
 h1 {
 	font-weight: bold;
-	color: #176781;
+	color:#FFF;
 }
 
 .navbar .brand {
@@ -76,13 +37,9 @@ h1 {
 	visibility: hidden;
 }
 
-.nav-header {
-    font-size: 14.8px;
-}
-
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
-	background-color: #176781/*azul*/;
-	color: #FFFFFF;
+	background-color:#000/*azul*/;
+	color:#FFF;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -95,7 +52,7 @@ h1 {
 }
 
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
-	color: #fc7a06;
+	color:#FFF;
 	/*
 	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
@@ -103,7 +60,7 @@ h1 {
 	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 	*/
-	background: radial-gradient(circle at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: radial-gradient(circle at center, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
 }
 
 .nav-tabs > li > a {
@@ -111,14 +68,14 @@ h1 {
 }
 
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
-	background-color: #eee;
+	background-color:#000;
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
-	background-color: #176781/*azul*/;
+	background-color:#000/*azul*/;
 	background-image: linear-gradient(to bottom, #176781/*azul*/, #176781/*azul*/);
 	background-repeat: repeat-x;
-	color: #FFFFFF;
+	color:#FFF;
 	text-decoration: none;
 }
 
@@ -134,14 +91,14 @@ h1 {
 }
 
 .carousel-inner .item {
-	padding: 0px;
+	padding: 0 ;
 	border: 1px solid #eee;
 	border-radius: 16px;
 }
 
 .carousel-inner .item h1 {
 	font-weight: bold;
-	color: #176781;
+	color:#FFF;
 }
 
 footer {
@@ -166,11 +123,11 @@ input[type="submit"].btn {
 }
 
 .btn-primary {
-	background-color: #176781;
+	background-color:#000;
 	background-image: linear-gradient(to bottom, #1A7996, #176781);
 	background-repeat: repeat-x;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	color: #FFFFFF;
+	color:#FFF;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -180,8 +137,8 @@ input[type="submit"].btn {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  color: #ffffff;
-  background-color: #176781;
+  color:#FFF;
+  background-color:#000;
 }
 
 .jumbotron {
@@ -211,11 +168,53 @@ input[type="submit"].btn {
 	display: inline-table;
 }
 
+
+legend {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: -moz-use-text-color -moz-use-text-color #E5E5E5;
+	border-image: none;
+	border-style: none none solid;
+	border-width: 0 0 1px;
+	color:#FFF;
+	display: block;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 32px;
+	margin-bottom: 10px;
+	padding: 0;
+	width: 100%;
+}
+
+.row-fluid [class*="span"] {
+	min-height: 24px;
+	line-height: 24px;
+}
+
+.popover {
+	max-width: 500px !important;
+}
+
 /**
  *
  * classes especificas da capesesp
  *
  */
+.nome-usuario {
+	max-width: 680px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@media (max-width:1199px){
+	.nome-usuario {
+		max-width: 400px;
+	}
+}
+
 .navbar.servico .navbar-inner {
 	padding: 0;
 }
@@ -225,7 +224,14 @@ input[type="submit"].btn {
 	font-weight: bold;
 	padding: 6px 16px;
 	display: inline-block;
+	color:#FFF;
 }
+
+.navbar.servico .nav > li > span > small {
+	font-weight: normal;
+	color:#000;
+}
+
 
 .amuc-logo  {
 	margin-top: 1em;
@@ -253,11 +259,11 @@ input[type="submit"].btn {
 }
 
 .cra-header h3 {
-	color: #176781/*azul*/;
+	color:#FFF/*azul*/;
 }
 
 .telefone {
-	color: #fc7a06;
+	color:#FFF;
 	white-space: nowrap;
 }
 
@@ -267,25 +273,25 @@ input[type="submit"].btn {
 
 .servicos h1, .servicos h2, .servicos h3 {
 	font-size: 24px;
-	color: #1E6811/*verde*/
+	color:#FFF/*verde*/
 }
 
 .servicos h1 i, .servicos h2 i, .servicos h3 i {
 	font-size:24px;
-	color: #fc7a06/*laranja*/;
+	color:#FFF/*laranja*/;
 }
 
 .servicos h2 {
-	color: #555;
+	color:#FFF;
 	font-size: 20px;
 	line-height: 32px;
 	margin: 5px 0;
-	border-bottom: 2px solid #FC7A06;
+	border-bottom: 2px solid #FFF;
 	margin-bottom: 16px;
 }
 
 .servicos ul {
-	/*background-color: #FFFFFF;*/
+	/*background-color:#000;*/
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 }
 
@@ -315,7 +321,7 @@ input[type="submit"].btn {
 }
 
 .tipo-credenciado i{
-	color: #fc7a06;/*laranja*/
+	color:#FFF;/*laranja*/
 }
 
 
@@ -330,7 +336,7 @@ input[type="submit"].btn {
 
 h3.asset-title {
 	margin-bottom: 0;
-	font-size: 17px;
+	font-size: 22px;
 }
 
 .logo img {
@@ -338,9 +344,6 @@ h3.asset-title {
 	margin-right: 1em;
 }
 
-div.login {
-	margin-top: 1%;
-}
 
 .page-header {
 	border-bottom: 1px solid #EEEEEE;
@@ -354,7 +357,7 @@ div.login {
 
 .profile-icons {
 	font-size: 48px;
-	color: #FC7A06;
+	color:#FFF;
 	margin: 20px;
 }
 
@@ -362,6 +365,10 @@ div.footer {
 	margin-top: 40px;
 }
 
+.obrigatorio {
+	color:#FFF;
+	padding: 0 .3em 0 0;
+}
 
 /**
  * especifico para funcional card
@@ -385,31 +392,6 @@ div.funcional-login {
 /*
  * diferencas de acordo com a resolucao de tela
  */
-
-@media screen and (max-width:1310px){
-	#_77_keywords {
-	    width: 130px;
-	}
-}
-
-@media screen and (max-width:1070px){
-	#_77_keywords {
-	    width: 89px;
-	}
-	#umclique{
-		width: 154px;
-	}
-}
-
-@media screen and (max-width:980px) {
-	.servicos h2 {
-		font-size: 16px;
-	}
-	h3.asset-title {
-		font-size: 16px;
-	}
-}
-
 @media screen and (max-width:768px) {
 	.after-top-bar {
 		margin-top: 16px;
@@ -434,14 +416,6 @@ div.funcional-login {
 		display: inherit;
 		visibility: visible;
 	}
-
-	#_77_keywords {
-	    width: 170px;
-	}
-
-	#umclique {
-		width: 250px;
-	}
 }
 
 @media screen and (max-width:480px) {
@@ -452,6 +426,7 @@ div.funcional-login {
 	.navbar-fixed-top {
 	    margin-bottom: 5px;
 	}
+
 
 	.cra-header h4 {
 		font-size: 14px;
@@ -467,8 +442,5 @@ div.funcional-login {
 		visibility: visible;
 	}
 
-	.carousel-inner .item,
-	.carousel-control {
-		display:none;
-	}
 }
+
